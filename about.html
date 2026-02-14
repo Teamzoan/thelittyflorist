@@ -91,54 +91,45 @@
             letter-spacing: 3px;
             text-transform: uppercase;
         }
-        /* ACHIEVEMENTS SECTION */
-        .achievements-section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
+        /* UPDATED ACHIEVEMENTS LAYOUT */
         .achievement-card {
             display: flex;
             align-items: flex-start;
             gap: 40px;
             margin-bottom: 80px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 40px;
+            padding-bottom: 60px;
         }
 
-        .achievement-date {
-            font-size: 0.8rem;
-            letter-spacing: 3px;
-            color: #888;
-            min-width: 100px;
-            text-transform: uppercase;
+        .achievement-image {
+            flex: 0 0 250px; /* Fixed width for the photo on desktop */
         }
 
-        .achievement-content h3 {
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin: 0 0 15px 0;
-            font-weight: 400;
+        .achievement-image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #e1e1e1;
+            padding: 8px; /* The Polaroid frame effect */
+            background: #fff;
         }
 
-        .achievement-content p {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            color: #555;
-            margin: 0;
+        .achievement-content {
+            flex: 1;
         }
 
-        .achievement-tag {
-            display: inline-block;
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            background: #f9f9f9;
-            padding: 5px 12px;
-            margin-top: 15px;
-            border: 1px solid #eee;
+        /* Ensure images stack and center on mobile */
+        @media (max-width: 768px) {
+            .achievement-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .achievement-image {
+                flex: 0 0 auto;
+                width: 80%; /* Makes image prominent on mobile */
+            }
         }
 
      @media (max-width: 768px) {
@@ -196,7 +187,7 @@
 
         <div class="about-text">
             <span class="subtitle">Artisan & Wild</span>
-            <h1>Our Story</h1>
+            <h1>The Story</h1>
             <p>
                 At The Litty Florist, we believe that flowers are more than just arrangements—they are a language of emotion. Based in St Ives - Cambridgeshire, our focuses is on the "Litty" aesthetic: a blend of high-end luxury and raw, natural beauty.
             </p>
@@ -210,28 +201,37 @@
     <h2 class="subtitle" style="text-align: center; margin-bottom: 60px;">Landmark Achievements</h2>
 
     <div class="achievement-card">
-        <div class="achievement-date">July 2019</div>
+        <div class="achievement-image">
+            <img src="QE.png" alt="Bouquet for Her Majesty">
+        </div>
         <div class="achievement-content">
+            <div class="achievement-date">July 2019</div>
             <h3>By Appointment of Her Majesty</h3>
-            <p>Commissioned to create a bespoke hand-tied bouquet for <strong>Her Majesty Queen Elizabeth II</strong> during her historic visit to the NIAB Centenary. The arrangement featured a symbolic blend of Chrysanthemums, Roses, and Wheat.</p>
+            <p>Commissioned to create a bespoke hand-tied bouquet for <strong>Her Majesty Queen Elizabeth II</strong> during her visit to NIAB. The arrangement featured a symbolic blend of Chrysanthemums, Roses, and Wheat, specifically designed to be small enough to be held in one hand.</p>
             <span class="achievement-tag">Royal Commission</span>
         </div>
     </div>
 
     <div class="achievement-card">
-        <div class="achievement-date">June 2015</div>
+        <div class="achievement-image">
+            <img src="ZoeASC2.png" alt="Royal Ascot Winning Hat">
+        </div>
         <div class="achievement-content">
+            <div class="achievement-date">June 2015</div>
             <h3>Royal Ascot Winner</h3>
-            <p>Named an Interflora Gold Member winner for the "Fit for a Royal Occasion" challenge. The winning creation was a surrealist floral hat inspired by the 150th anniversary of Alice in Wonderland, featuring Cymbidium orchids and tortured willow.</p>
+            <p>Named an Interflora Gold Member winner for the "Fit for a Royal Occasion" challenge. The surrealist floral hat was inspired by the 150th anniversary of <em>Alice's Adventures in Wonderland</em>, featuring tortured willow to mimic the Mad Hatter.</p>
             <span class="achievement-tag">Interflora Gold Winner</span>
         </div>
     </div>
 
     <div class="achievement-card">
-        <div class="achievement-date">2014 & 2016</div>
+        <div class="achievement-image">
+            <img src="BQ5.png" alt="RHS Chelsea Flower Show Entry">
+        </div>
         <div class="achievement-content">
+            <div class="achievement-date">2014</div>
             <h3>RHS Chelsea Flower Show</h3>
-            <p>Two-time Heat Finalist for the prestigious <strong>Young Florist of the Year</strong> award. Competing at this level places a designer among the technical and creative elite of the UK floral industry.</p>
+            <p>Heat Finalist for the <strong>Young Florist of the Year</strong> award. Competing at this level demonstrates professional mastery and identifies the "very best floristry talent" in the country.</p>
             <span class="achievement-tag">Chelsea Finalist</span>
         </div>
     </div>
