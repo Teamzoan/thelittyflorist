@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | The Litty Florist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            color: #020101;
+            padding: 40px 20px;
+        }
+
+        /* Navigation Simple */
+        nav {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #020101;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin: 0 20px;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover { opacity: 0.5; }
+
+        /* About Layout */
+        .about-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #e1e1e1;
+            padding: 10px; /* Polaroid style frame */
+        }
+
+        .about-text {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #888;
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #444;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+
+        .signature {
+            font-family: serif; /* Gives a personal 'handwritten' touch */
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #020101;
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #bbb;
+            margin-top: 100px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        /* ACHIEVEMENTS SECTION */
+        .achievements-section {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+
+        .achievement-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 80px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+
+        .achievement-date {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            color: #888;
+            min-width: 100px;
+            text-transform: uppercase;
+        }
+
+        .achievement-content h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0 0 15px 0;
+            font-weight: 400;
+        }
+
+        .achievement-content p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        .achievement-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: #f9f9f9;
+            padding: 5px 12px;
+            margin-top: 15px;
+            border: 1px solid #eee;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .achievement-card { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a>
+    </nav>
+
+    <main class="about-section">
+        <div class="about-image">
+            <img src="bride1.png" alt="The Litty Florist Studio">
+        </div>
+
+        <div class="about-text">
+            <span class="subtitle">Artisan & Wild</span>
+            <h1>My Story</h1>
+            <p>
+                At The Litty Florist, we believe that flowers are more than just arrangements—they are a language of emotion. Based in St Ives - Cambridgeshire, our focuses is on the "Litty" aesthetic: a blend of high-end luxury and raw, natural beauty.
+            </p>
+            <p>
+                Every stem is hand-selected, and every bouquet is curated to tell a unique story. Whether it's a grand wedding installation or a simple weekly subscription, we bring an artisan touch to every petal.
+            </p>
+            <div class="signature">Zoe - The Litty Florist</div>
+        </div>
+    </main>
+<section class="achievements-section">
+    <h2 class="subtitle" style="text-align: center; margin-bottom: 50px;">Landmark Achievements</h2>
+
+    <div class="achievement-card">
+        <div class="achievement-date">July 2019</div>
+        <div class="achievement-content">
+            <h3>By Appointment of Her Majesty</h3>
+            <p>Commissioned to create a bespoke hand-tied bouquet for <strong>Her Majesty Queen Elizabeth II</strong> during her historic visit to the NIAB Centenary. The arrangement featured a symbolic blend of Chrysanthemums, Roses, and Wheat.</p>
+            <span class="achievement-tag">Royal Commission</span>
+        </div>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-date">June 2015</div>
+        <div class="achievement-content">
+            <h3>Royal Ascot Winner</h3>
+            <p>Named an Interflora Gold Member winner for the "Fit for a Royal Occasion" challenge. The winning creation was a surrealist floral hat inspired by the 150th anniversary of Alice in Wonderland, featuring Cymbidium orchids and tortured willow.</p>
+            <span class="achievement-tag">Interflora Gold Winner</span>
+        </div>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-date">2014 & 2016</div>
+        <div class="achievement-content">
+            <h3>RHS Chelsea Flower Show</h3>
+            <p>Two-time Heat Finalist for the prestigious <strong>Young Florist of the Year</strong> award. Competing at this level places a designer among the technical and creative elite of the UK floral industry.</p>
+            <span class="achievement-tag">Chelsea Finalist</span>
+        </div>
+    </div>
+</section>
+    <div class="footer-text">
+        © 2026 The Litty Florist
+    </div>
+
+</body>
+</html>
