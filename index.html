@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Construction | The Litty Florist</title>
     <style>
-        /* 1. LAYOUT - Centers the card perfectly on the screen */
+        /* 1. LAYOUT */
         body, html {
             height: 100%;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f4f4f9; /* Light grey background */
+            background-color: #f4f4f9;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* 2. THE CARD CONTAINER */
+        /* 2. THE CARD */
         .construction-card {
             background: white;
             padding: 50px 30px;
@@ -27,10 +27,9 @@
             width: 90%;
         }
 
-        /* 3. LOGO STYLES */
         .logo {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #6c227c;
@@ -38,7 +37,6 @@
             animation: pulse 2s infinite ease-in-out;
         }
 
-        /* 4. TEXT STYLES */
         h1 {
             color: #6c227c;
             margin: 0;
@@ -48,7 +46,7 @@
 
         h2 {
             color: #d192da;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 20px;
@@ -58,30 +56,47 @@
             color: #5a5a5a;
             font-size: 1.1rem;
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        /* 5. INSTAGRAM BUTTON STYLES */
-        .instagram-btn {
+        /* 3. BUTTONS SECTION */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 25px 0;
+            align-items: center;
+        }
+
+        .btn {
             display: inline-block;
-            background-color: #6c227c;
-            color: white;
-            padding: 12px 25px;
+            width: 80%;
+            padding: 14px 0;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            margin: 10px 0 25px 0;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(108, 34, 124, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .instagram-btn:hover {
-            background-color: #d192da;
+        .instagram-btn {
+            background-color: #6c227c;
+            color: white;
+        }
+
+        .email-btn {
+            background-color: white;
+            color: #6c227c;
+            border: 2px solid #6c227c;
+        }
+
+        .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(108, 34, 124, 0.3);
+            box-shadow: 0 6px 20px rgba(108, 34, 124, 0.2);
+            opacity: 0.9;
         }
 
-        /* 6. VISUAL ELEMENTS */
+        /* 4. ANIMATIONS & DIVIDER */
         .divider {
             height: 3px;
             width: 50px;
@@ -90,7 +105,6 @@
             border-radius: 2px;
         }
 
-        /* 7. ANIMATIONS */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.03); }
@@ -114,12 +128,17 @@
         
         <div class="divider"></div>
         
-        <p>Our digital garden is currently being planted. We're working hard to bring you the freshest arrangements.</p>
+        <p>Our digital garden is being planted. While we grow, stay in touch with us here:</p>
 
-        <p>Follow our journey on Instagram:</p>
-        <a href="https://www.instagram.com/thelittyflorist?igsh=MTI5cWdwazd4ZHRvYg%3D%3D" target="_blank" class="instagram-btn">
-            @thelittyflorist
-        </a>
+        <div class="button-group">
+            <a href="https://www.instagram.com/thelittyflorist?igsh=MTI5cWdwazd4ZHRvYg%3D%3D" target="_blank" class="btn instagram-btn">
+                Follow on Instagram
+            </a>
+
+            <a href="mailto:hello@thelittyflorist.com?subject=Inquiry%20from%20Website" class="btn email-btn">
+                Email Us
+            </a>
+        </div>
         
         <p><strong>Check back shortly!</strong></p>
 
