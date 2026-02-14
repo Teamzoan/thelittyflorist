@@ -141,36 +141,45 @@
             border: 1px solid #eee;
         }
 
-        /* Mobile adjustments */
-        /* 1. Ensure the container centers its contents */
-.about-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-/* 2. Responsive adjustment for mobile */
-@media (max-width: 768px) {
+     @media (max-width: 768px) {
+    /* 1. Force the main container to center everything */
     .about-section {
-        /* This ensures the grid columns stack and center */
         display: flex;
         flex-direction: column;
-        gap: 30px; 
+        align-items: center; /* This centers children horizontally */
+        text-align: center;   /* This centers the text inside paragraphs */
+        gap: 40px;
     }
 
-    .about-image img {
-        /* Ensures the image doesn't exceed screen width and stays centered */
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }
-    
-    .about-text {
-        text-align: center; /* Optional: centers text to match the centered image */
+    /* 2. Remove side padding that might be pushing it off-center */
+    .about-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
         padding: 0;
     }
-}
+
+    /* 3. Ensure the photo doesn't have odd margins */
+    .about-image img {
+        max-width: 90%; /* Leaves a little breathing room on the sides */
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* 4. Center the text content */
+    .about-text {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2rem; /* Slightly smaller for mobile screens */
+    }
+}}
     </style>
 </head>
 <body>
