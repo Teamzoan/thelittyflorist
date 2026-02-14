@@ -3,118 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction | The Litty Florist</title>
+    <title>The Litty Florist | Artisan Floral Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* 1. LAYOUT */
-        body, html {
-            height: 100%;
+        /* 1. GLOBAL ARTISAN STYLES */
+        body {
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f9;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            color: #020101;
+            display: block; 
+            padding: 60px 20px;
         }
 
-        /* 2. THE CARD */
+        /* 2. HEADER CARD */
         .construction-card {
-            background: white;
-            padding: 50px 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(108, 34, 124, 0.15);
             text-align: center;
             max-width: 500px;
-            width: 90%;
+            margin: 0 auto 80px auto;
         }
-
         .logo {
-            width: 160px;
-            height: 160px;
+            width: 210px;
+            height: 210px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #6c227c;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite ease-in-out;
+            border: 1px solid #e1e1e1;
+            margin-bottom: 25px;
+    
+            animation: littyPulse 3s infinite ease-in-out;
+}
+
+        /* THE PULSE ANIMATION */
+        @keyframes littyPulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(161, 161, 161, 0.2);
+            }
+        50% {
+            transform: scale(1.05); /* Slight grow */
+            box-shadow: 0 0 20px 5px rgba(225, 225, 225, 0.4); /* Soft glow */
+            }
+            100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(161, 161, 161, 0);
+            }
+}
+
+        h1 { 
+            font-size: 2.2rem; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            margin: 0; 
+            font-weight: 600;
         }
 
-        h1 {
-            color: #6c227c;
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
+        h2.subtitle { 
+            color: #888; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 6px; 
+            margin-bottom: 15px; 
+            font-weight: 300; 
         }
 
-        h2 {
-            color: #d192da;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
+        .divider { 
+            height: 1px; 
+            width: 50px; 
+            background: #020101; 
+            margin: 25px auto; 
         }
 
-        p {
-            color: #5a5a5a;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
+        p.intro-text { 
+            color: #666; 
+            font-size: 1rem; 
+            line-height: 1.8; 
+            font-weight: 300;
+            max-width: 400px;
+            margin: 0 auto 30px auto;
         }
 
-        /* 3. BUTTONS SECTION */
+        /* 3. ARTISAN BUTTONS */
         .button-group {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin: 25px 0;
-            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .btn {
             display: inline-block;
-            width: 80%;
-            padding: 14px 0;
-            border-radius: 30px;
+            padding: 14px 35px;
+            border-radius: 9999px;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .instagram-btn {
-            background-color: #6c227c;
+        .instagram-btn { background: #020101; color: white; border: 1px solid #020101; }
+        .email-btn { background: transparent; color: #020101; border: 1px solid #020101; }
+        
+        .btn:hover { 
+            background: #333; 
+            color: #fff; 
+            transform: translateY(-2px); 
+        }
+
+        /* 4. THE GALLERY - CLEAN LOOK */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 500px; /* Taller for a more editorial look */
+            overflow: hidden;
+            background: #fcfcfc;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.15, 0.75, 0.5, 1);
+        }
+
+        /* THE CLEAN OVERLAY */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(2, 1, 1, 0.4); /* Subtle dark wash */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
             color: white;
         }
 
-        .email-btn {
-            background-color: white;
-            color: #6c227c;
-            border: 2px solid #6c227c;
+        .overlay h3 {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            transform: translateY(15px);
+            transition: transform 0.5s ease;
         }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(108, 34, 124, 0.2);
-            opacity: 0.9;
+        .overlay span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 300;
+            border-top: 1px solid rgba(255,255,255,0.4);
+            padding-top: 8px;
         }
 
-        /* 4. ANIMATIONS & DIVIDER */
-        .divider {
-            height: 3px;
-            width: 50px;
-            background-color: #6c227c;
-            margin: 20px auto;
-            border-radius: 2px;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
+        /* HOVER EFFECTS */
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item:hover .overlay { opacity: 1; }
+        .gallery-item:hover .overlay h3 { transform: translateY(0); }
 
         .footer-text {
-            font-size: 0.8rem;
-            color: #aaa;
-            margin-top: 20px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #bbb;
+            margin-top: 80px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* MOBILE ADJUSTMENT */
+        @media (max-width: 600px) {
+            .button-group { flex-direction: column; align-items: center; }
+            .btn { width: 80%; }
         }
     </style>
 </head>
@@ -122,30 +190,47 @@
 
     <div class="construction-card">
         <img src="logo.png" alt="The Litty Florist Logo" class="logo">
-        
-        <h2>Coming Soon</h2>
+        <h2 class="subtitle">Artisan Floral Design</h2>
         <h1>The Litty Florist</h1>
-        
         <div class="divider"></div>
+        <p class="intro-text">We are currently curating our digital boutique.<br> 
+            Join us on our journey as we grow.</p>
         
-        <p>Our digital garden is being planted. While we grow, stay in touch with us here:</p>
-
         <div class="button-group">
-            <a href="https://www.instagram.com/thelittyflorist?igsh=MTI5cWdwazd4ZHRvYg%3D%3D" target="_blank" class="btn instagram-btn">
-                Follow on Instagram
-            </a>
-
-            <a href="mailto:thelittyflorist@gmail.com?subject=Inquiry%20from%20Website" class="btn email-btn">
-                Email Us
-            </a>
+            <a href="https://www.instagram.com/thelittyflorist" target="_blank" class="btn instagram-btn">Instagram</a>
+            <a href="mailto:thelittyflorist@gmail.com" class="btn email-btn">Enquiries</a>
         </div>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="buttonhole1.PNG" alt="Bridal">
+            <div class="overlay">
+                <h3>Bridal</h3>
+                <span>Bespoke Bouquets</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="fun1.png" alt="Events">
+            <div class="overlay">
+                <h3>Events</h3>
+                <span>Floral Installations</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="bride1.png" alt="Subscription">
+            <div class="overlay">
+                <h3>Editorial</h3>
+                <span>The Litty Edit</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-text">
+        © 2026 The Litty Florist
         
-        <p><strong>Check back shortly!</strong></p>
-
-        <div class="footer-text">
-            © 2026 The Litty Florist <br>
-            Website Under Construction
-        </div>
     </div>
 
 </body>
