@@ -142,9 +142,35 @@
         }
 
         /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .achievement-card { flex-direction: column; gap: 15px; }
-        }
+        /* 1. Ensure the container centers its contents */
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* 2. Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .about-section {
+        /* This ensures the grid columns stack and center */
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
+    }
+
+    .about-image img {
+        /* Ensures the image doesn't exceed screen width and stays centered */
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .about-text {
+        text-align: center; /* Optional: centers text to match the centered image */
+        padding: 0;
+    }
+}
     </style>
 </head>
 <body>
@@ -172,7 +198,7 @@
         </div>
     </main>
 <section class="achievements-section">
-    <h2 class="subtitle" style="text-align: center; margin-bottom: 50px;">Landmark Achievements</h2>
+    <h2 class="subtitle" style="text-align: center; margin-bottom: 60px;">Landmark Achievements</h2>
 
     <div class="achievement-card">
         <div class="achievement-date">July 2019</div>
