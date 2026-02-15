@@ -16,7 +16,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 2. ELEVATED NAVIGATION (Matching Index & Story) */
+        /* 2. ELEVATED NAVIGATION */
         nav {
             text-align: center;
             padding: 40px 0;
@@ -97,11 +97,11 @@
         .gallery-item img {
             width: 100%;
             display: block;
-            filter: grayscale(10%); /* Subtle editorial desaturation */
+            filter: grayscale(10%);
             transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        /* 5. OVERLAY (Matching Home Wash) */
+        /* 5. OVERLAY */
         .overlay {
             position: absolute;
             inset: 0;
@@ -126,7 +126,6 @@
             padding-bottom: 10px;
         }
 
-        /* HOVER EFFECTS */
         .gallery-item:hover img {
             transform: scale(1.05);
             filter: grayscale(0);
@@ -136,7 +135,6 @@
             opacity: 1;
         }
 
-        /* 6. MOBILE RESPONSIVENESS */
         @media (max-width: 900px) {
             .artisan-gallery { column-count: 2; }
             h1 { font-size: 2rem; }
@@ -162,7 +160,7 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">Story</a>
-        <a href="Portfolio.html">Portfolio</a>
+        <a href="portfolio.html">Portfolio</a>
     </nav>
 
     <header class="gallery-header">
@@ -173,90 +171,13 @@
 
     <div class="artisan-gallery">
         <div class="gallery-item">
-            <img src="bride1.png" alt="Bridal Florals and Wedding Installations">
+            <img src="bride1.png" alt="Bridal Florals">
             <div class="overlay"><span>Wedding Installations</span></div>
         </div>
-
         <div class="gallery-item">
             <img src="BQ1.PNG" alt="Artisan Bridal Bouquet">
             <div class="overlay"><span>Bridal Bouquets</span></div>
         </div>
-
-        <div class="gallery-item">
-            <img src="BQ2.PNG" alt="Award Winning Floral Design">
-            <div class="overlay"><span>Award-Winning Design</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="BQ3.PNG" alt="Luxury Bridesmaid Bouquets">
-            <div class="overlay"><span>Bridesmaid Bouquets</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="BQ4.PNG" alt="Bespoke Handtied Arrangement">
-            <div class="overlay"><span>Artisan Bouquets</span></div>
-        </div>
-        
-        <div class="gallery-item">
-            <img src="BQ5.png" alt="Special Occasion Florals">
-            <div class="overlay"><span>Special Occasions</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="BH1.PNG" alt="Floral Art Detailing">
-            <div class="overlay"><span>Artisan Detailing</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="fun1.png" alt="Bespoke Funeral Tributes">
-            <div class="overlay"><span>Funeral Tributes</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="BQ6.png" alt="Handtied Floral Arrangement">
-            <div class="overlay"><span>Handtied Arrangements</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="BH2.png" alt="Wedding Button Holes">
-            <div class="overlay"><span>Button Holes</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="BQ7.png" alt="Luxury Event Florals">
-            <div class="overlay"><span>Luxury Events</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="fun2.png" alt="Funeral Floral Tributes">
-            <div class="overlay"><span>Funeral Tributes</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="WRTH1.png" alt="Handmade Christmas Wreath">
-            <div class="overlay"><span>Christmas Wreaths</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="BH3.png" alt="Bespoke Event Floristry">
-            <div class="overlay"><span>Luxury Events</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="TA1.PNG" alt="Wedding Table Arrangements">
-            <div class="overlay"><span>Wedding Events</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Cake1.png" alt="Floral Cake Decoration">
-            <div class="overlay"><span>Cake Decoration</span></div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="JC.png" alt="The Litty Florist Team">
-            <div class="overlay"><span>Litty Helpers</span></div>
-        </div>
-
         <div class="gallery-item">
             <img src="WRTH3.jpg" alt="Artisan Wreath Work">
             <div class="overlay"><span>Wreath Work</span></div>
