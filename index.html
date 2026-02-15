@@ -4,210 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Litty Florist | Artisan Floral Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* 1. GLOBAL ARTISAN STYLES */
+        /* 1. GLOBAL REFINEMENT */
         body {
             margin: 0;
             background-color: #ffffff;
             font-family: 'Outfit', sans-serif;
             color: #020101;
-            display: block; 
-            padding: 60px 20px;
+            padding: 0 0 100px 0; /* Removed top padding to allow Nav to breath */
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* 2. HEADER CARD */
+        /* 2. ELEVATED NAVIGATION */
+        nav {
+            text-align: center;
+            padding: 40px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #020101;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-size: 0.7rem;
+            margin: 0 25px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover { color: #888; }
+
+        /* 3. LOGO & HEADER */
         .construction-card {
             text-align: center;
-            max-width: 500px;
-            margin: 0 auto 80px auto;
+            max-width: 700px; /* Increased for better line-lengths */
+            margin: 60px auto 100px auto;
+            padding: 0 20px;
         }
-   .logo {
-            /* This allows it to be 400px on desktop... */
-            width: 400px; 
-            /* ...but this ensures it never gets wider than the phone screen */
-            max-width: 100%; 
-            
-            height: auto; /* Maintains the circle shape */
+
+        .logo {
+            width: 380px; 
+            max-width: 85%; 
+            height: auto;
             border-radius: 50%;
             object-fit: cover;
-            border: 1px solid #e1e1e1;
-            margin-bottom: 25px;
-            
-            /* Ensures it stays centered in its container */
+            border: 1px solid #f0f0f0;
+            margin-bottom: 40px;
             display: block;
             margin-left: auto;
             margin-right: auto;
-
-            animation: littyPulse 3s infinite ease-in-out;
+            animation: littyPulse 4s infinite ease-in-out; /* Slower, more elegant pulse */
         }
-        /* THE PULSE ANIMATION */
+
         @keyframes littyPulse {
-        0% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(161, 161, 161, 0.2);
-            }
-        50% {
-            transform: scale(1.05); /* Slight grow */
-            box-shadow: 0 0 20px 5px rgba(225, 225, 225, 0.4); /* Soft glow */
-            }
-            100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(161, 161, 161, 0);
-            }
-}
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+            50% { transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        }
 
         h1 { 
-            font-size: 2.2rem; 
+            font-size: 2.8rem; 
             text-transform: uppercase; 
-            letter-spacing: 5px; 
+            letter-spacing: 0.3em; 
             margin: 0; 
-            font-weight: 600;
+            font-weight: 300; /* Lighter weight for premium feel */
         }
 
-        h2.subtitle { 
-            color: #888; 
-            font-size: 0.75rem; 
+        .subtitle { 
+            color: #aaa; 
+            font-size: 0.65rem; 
             text-transform: uppercase; 
-            letter-spacing: 6px; 
-            margin-bottom: 15px; 
-            font-weight: 300; 
+            letter-spacing: 0.5em; 
+            margin-bottom: 20px; 
+            font-weight: 400; 
         }
 
         .divider { 
             height: 1px; 
-            width: 50px; 
+            width: 40px; 
             background: #020101; 
-            margin: 25px auto; 
+            margin: 30px auto; 
+            opacity: 0.3;
         }
 
-        p.intro-text { 
-            color: #666; 
-            font-size: 1rem; 
-            line-height: 1.8; 
+        .intro-text { 
+            color: #555; 
+            font-size: 1.05rem; 
+            line-height: 1.9; 
             font-weight: 300;
-            max-width: 400px;
-            margin: 0 auto 30px auto;
+            max-width: 550px;
+            margin: 0 auto 40px auto;
         }
 
-        /* 3. ARTISAN BUTTONS */
+        /* 4. BUTTONS */
         .button-group {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 20px;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 35px;
-            border-radius: 9999px;
+            padding: 16px 40px;
+            border-radius: 0; /* Square buttons feel more "Artisan/Architectural" */
             text-decoration: none;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
+            letter-spacing: 3px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #020101;
         }
 
-        .instagram-btn { background: #020101; color: white; border: 1px solid #020101; }
-        .email-btn { background: transparent; color: #020101; border: 1px solid #020101; }
+        .instagram-btn { background: #020101; color: white; }
+        .email-btn { background: transparent; color: #020101; }
         
         .btn:hover { 
-            background: #333; 
-            color: #fff; 
-            transform: translateY(-2px); 
+            background: #f8f8f8; 
+            color: #020101; 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
-        /* 4. THE GALLERY - CLEAN LOOK */
+        /* 5. GALLERY UPGRADE */
         .gallery-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 0 15px;
         }
 
         .gallery-item {
             position: relative;
-            height: 500px; /* Taller for a more editorial look */
+            height: 650px; 
             overflow: hidden;
-            background: #fcfcfc;
+            background: #f9f9f9;
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 1.2s cubic-bezier(0.15, 0.75, 0.5, 1);
+            filter: grayscale(10%); /* Subtle editorial desaturation */
+            transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        /* THE CLEAN OVERLAY */
         .overlay {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(2, 1, 1, 0.4); /* Subtle dark wash */
+            inset: 0;
+            background: rgba(255, 255, 255, 0.85); /* Light overlay instead of dark */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             opacity: 0;
-            transition: opacity 0.5s ease;
-            color: white;
+            transition: all 0.6s ease;
         }
 
         .overlay h3 {
+            color: #020101;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             font-weight: 400;
-            margin-bottom: 8px;
-            transform: translateY(15px);
-            transition: transform 0.5s ease;
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
         }
 
         .overlay span {
-            font-size: 0.7rem;
+            color: #888;
+            font-size: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 300;
-            border-top: 1px solid rgba(255,255,255,0.4);
-            padding-top: 8px;
+            letter-spacing: 4px;
         }
 
-        /* HOVER EFFECTS */
-        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item:hover img { transform: scale(1.08); filter: grayscale(0); }
         .gallery-item:hover .overlay { opacity: 1; }
-        .gallery-item:hover .overlay h3 { transform: translateY(0); }
 
         .footer-text {
             text-align: center;
-            font-size: 0.7rem;
-            color: #bbb;
-            margin-top: 80px;
-            letter-spacing: 3px;
+            font-size: 0.65rem;
+            color: #aaa;
+            margin-top: 120px;
+            letter-spacing: 4px;
             text-transform: uppercase;
         }
 
         /* MOBILE ADJUSTMENT */
-        @media (max-width: 600px) {
+        @media (max-width: 900px) {
+            .gallery-container { grid-template-columns: 1fr; gap: 10px; }
+            .gallery-item { height: 450px; }
+            .logo { width: 280px; }
+            h1 { font-size: 1.8rem; }
             .button-group { flex-direction: column; align-items: center; }
             .btn { width: 80%; }
         }
     </style>
 </head>
 <body>
-<nav style="text-align: center; padding: 20px;">
-    <a href="index.html" style="text-decoration: none; color: #020101; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin: 0 20px;">Home</a>
-    <a href="about.html" style="text-decoration: none; color: #020101; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin: 0 20px;">Our Story</a>
-</nav>
-<br>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Story</a>
+        <a href="Portfolio.html">Portfolio</a>
+    </nav>
 
     <div class="construction-card">
-        <img src="logo.png" alt="The Litty Florist Logo" class="logo">
-        <h2 class="subtitle">Artisan Floral Design</h2>
+        <img src="logo.png" alt="The Litty Florist - Artisan Floral Design" class="logo">
+        <span class="subtitle">Bespoke Floral Artistry</span>
         <h1>The Litty Florist</h1>
         <div class="divider"></div>
-        <p class="intro-text">We are currently curating our digital boutique.<br> 
-            Join us on our journey as we grow.</p>
+        <p class="intro-text">
+            Based in the heart of St Ives, we curate high-end luxury with raw, natural beauty. Every stem is hand-selected to tell a unique story, bringing an artisan touch to every petal.
+        </p>
         
         <div class="button-group">
             <a href="https://www.instagram.com/thelittyflorist" target="_blank" class="btn instagram-btn">Instagram</a>
@@ -217,23 +232,23 @@
 
     <div class="gallery-container">
         <div class="gallery-item">
-            <img src="buttonhole1.PNG" alt="Bridal">
+            <img src="BH1.PNG" alt="Artisan Bridal Bouquet">
             <div class="overlay">
                 <h3>Bridal</h3>
-                <span>Bespoke Bouquets</span>
+                <span>Bespoke Design</span>
             </div>
         </div>
 
         <div class="gallery-item">
-            <img src="fun1.png" alt="Events">
+            <img src="fun1.png" alt="Event Floral Installation">
             <div class="overlay">
                 <h3>Events</h3>
-                <span>Floral Installations</span>
+                <span>Atmospheric Art</span>
             </div>
         </div>
 
         <div class="gallery-item">
-            <img src="bride1.png" alt="Subscription">
+            <img src="bride1.png" alt="Floral Editorial Selection">
             <div class="overlay">
                 <h3>Editorial</h3>
                 <span>The Litty Edit</span>
@@ -242,8 +257,8 @@
     </div>
 
     <div class="footer-text">
-        © 2026 The Litty Florist
-        
+        © 2026 The Litty Florist <br>
+        Cambridgeshire & Beyond
     </div>
 
 </body>
