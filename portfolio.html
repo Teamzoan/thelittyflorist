@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | The Litty Florist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 1. GLOBAL REFINEMENT */
+        body {
+            margin: 0;
+            background-color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            color: #020101;
+            padding: 0 0 100px 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 2. ELEVATED NAVIGATION (Matching Index & Story) */
+        nav {
+            text-align: center;
+            padding: 40px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #020101;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-size: 0.7rem;
+            margin: 0 25px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover { color: #888; }
+
+        /* 3. HEADER SECTION */
+        .gallery-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 80px auto 80px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+            color: #aaa;
+            font-size: 0.65rem;
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .header-desc {
+            font-weight: 300;
+            line-height: 1.9;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        /* 4. MASONRY GRID - EDITORIAL STYLE */
+        .artisan-gallery {
+            column-count: 3;
+            column-gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            background: #f9f9f9;
+            border: 1px solid #f0f0f0;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            filter: grayscale(10%); /* Subtle editorial desaturation */
+            transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        /* 5. OVERLAY (Matching Home Wash) */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.6s ease;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .overlay span {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #020101;
+            font-weight: 400;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* HOVER EFFECTS */
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0);
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* 6. MOBILE RESPONSIVENESS */
+        @media (max-width: 900px) {
+            .artisan-gallery { column-count: 2; }
+            h1 { font-size: 2rem; }
+        }
+
+        @media (max-width: 600px) {
+            .artisan-gallery { column-count: 1; }
+            .gallery-header { margin: 60px auto 40px auto; }
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 0.65rem;
+            color: #aaa;
+            margin-top: 120px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Story</a>
+        <a href="Portfolio.html">Portfolio</a>
+    </nav>
+
+    <header class="gallery-header">
+        <span class="subtitle">A Collection of Stems</span>
+        <h1>Portfolio</h1>
+        <p class="header-desc">A visual diary of bespoke installations, royal commissions, and artisan bouquets curated in our St Ives studio.</p>
+    </header>
+
+    <div class="artisan-gallery">
+        <div class="gallery-item">
+            <img src="bride1.png" alt="Bridal Florals and Wedding Installations">
+            <div class="overlay"><span>Wedding Installations</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BQ1.PNG" alt="Artisan Bridal Bouquet">
+            <div class="overlay"><span>Bridal Bouquets</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BQ2.PNG" alt="Award Winning Floral Design">
+            <div class="overlay"><span>Award-Winning Design</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BQ3.PNG" alt="Luxury Bridesmaid Bouquets">
+            <div class="overlay"><span>Bridesmaid Bouquets</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BQ4.PNG" alt="Bespoke Handtied Arrangement">
+            <div class="overlay"><span>Artisan Bouquets</span></div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="BQ5.png" alt="Special Occasion Florals">
+            <div class="overlay"><span>Special Occasions</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BH1.PNG" alt="Floral Art Detailing">
+            <div class="overlay"><span>Artisan Detailing</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="fun1.png" alt="Bespoke Funeral Tributes">
+            <div class="overlay"><span>Funeral Tributes</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BQ6.png" alt="Handtied Floral Arrangement">
+            <div class="overlay"><span>Handtied Arrangements</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BH2.png" alt="Wedding Button Holes">
+            <div class="overlay"><span>Button Holes</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BQ7.png" alt="Luxury Event Florals">
+            <div class="overlay"><span>Luxury Events</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="fun2.png" alt="Funeral Floral Tributes">
+            <div class="overlay"><span>Funeral Tributes</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="WRTH1.png" alt="Handmade Christmas Wreath">
+            <div class="overlay"><span>Christmas Wreaths</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="BH3.png" alt="Bespoke Event Floristry">
+            <div class="overlay"><span>Luxury Events</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="TA1.PNG" alt="Wedding Table Arrangements">
+            <div class="overlay"><span>Wedding Events</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Cake1.png" alt="Floral Cake Decoration">
+            <div class="overlay"><span>Cake Decoration</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="JC.png" alt="The Litty Florist Team">
+            <div class="overlay"><span>Litty Helpers</span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="WRTH3.jpg" alt="Artisan Wreath Work">
+            <div class="overlay"><span>Wreath Work</span></div>
+        </div>
+    </div>
+
+    <div class="footer-text">
+        © 2026 The Litty Florist <br>
+        Curated Floral Art
+    </div>
+
+</body>
+</html>
